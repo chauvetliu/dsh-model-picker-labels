@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model picker provider labels",
+    "description": "Shows which provider route the selected model belongs to, and labels every model row with its provider so a picker with several configured providers stays readable. On Chinese pages, reasoning efforts read bilingually, such as 低(Low)."
+  }
+}

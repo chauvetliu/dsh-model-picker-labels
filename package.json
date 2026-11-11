@@ -1,0 +1,48 @@
+{
+  "name": "dsh-model-picker-labels",
+  "version": "0.3.0",
+  "private": true,
+  "description": "让 DSH 的模型选择框每行都写清「哪个模型 + 哪条线路」：列表里模型名后跟一个淡色供应商标签，避免同名模型分不清；输入框的模型按钮标出当前线路，并把推理等级名显示成「低（Low）」这种中英对照。Show the model name and its provider on every picker row, the current route on the model button, and reasoning efforts bilingually on Chinese pages.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "model-picker",
+    "provider"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "core.js",
+    "cordis.patch.yml",
+    "README.md",
+    "icon.svg",
+    "locale/*.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "sync": "node scripts/sync-core.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "MIT"
+}

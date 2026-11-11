@@ -1,0 +1,14 @@
+# dsh-model-picker-labels —— bundle patch（插件的挂载声明）
+#
+# DSH 启动时把这段 patch 叠加进宿主配置树；浏览器半区由 package.json 的
+# dsh.client 声明发布，并绑定在下面这个裸包名行上。
+#
+# 本插件没有宿主侧行为：在「设置 → 插件」里启用 / 停用即可，无需重启。
+#
+# 可选配置（在 profile 的 cordis.patch.yml 里按 id 覆盖）：
+#   enabled   设为 false 等于停用插件的渲染（默认 true）
+- insert:
+    - id: model-picker-labels
+      name: dsh-model-picker-labels
+      config:
+        enabled: true
